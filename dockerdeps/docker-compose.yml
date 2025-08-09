@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: static_nginx
+    restart: always
+    ports:
+      - "803:80"
+    volumes:
+      - ../:/usr/share/nginx/html:ro
